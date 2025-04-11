@@ -5,6 +5,70 @@ body{
 }
 
 h1{
-    font-size: 32px;
+    font-size: 2rem; /*1rem = 16   1en = M*/
     font-weight: bold;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+header{
+    background-color: #0077b6;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Pode ser necessário top, left, botton ou right*/
+    top: 0;
+} 
+
+header ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem
+}
+
+header a{
+    color:#ffffff;
+    font-weight: 700;
+    padding: .5rem 1rem;
+}
+
+header a:hover{
+    background-color: #023e8a;
+}
+
+section ul li a:hover{
+    background-color: #aec8eb;
+}
+
+section li a:hover{
+    background-color: #aec8eb;
+}
+
+footer ul li:hover{
+    background-color: #aec8eb;
+}
+
+
+
+section {
+    height: 80vh;
+    margin: 2rem;
+    scroll-margin-top: 4rem;
+    padding: 1rem;
+    /*border-width: 1px;
+    border-style: solid;
+    border-color: black;*/
+    border: 1px solid black;
+    /*overflow:hidden;*/
+}
+p{
+    margin-bottom: 1rem;
 }
