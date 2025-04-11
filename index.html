@@ -5,24 +5,40 @@
          <meta charset="utf-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <title>Sobre mim</title>
+
+        <link rel="stylesheet" href="reset.css">
+
+         <link rel="stylesheet" href="style.css">
+         <style>
+            /*seletor{
+                propriedade: valor;
+            }*/
+
+            /*css interno*/
+            body{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+         </style>
     </head>
     <!--HTML NÃO TEM PESCOÇO-->
-    <body>
+    <body style="background-color: white; /*CSS inline*/">
         <header>
-            <ul>
-                <li><a href="#sobreMim">Sobre mim</a></li>
-                <li><a href="#fromacaoAcademica">Formação academica</a></li>
-                <li><a href="#hardSkills">Hard skills</li></a>
-                <li><a href="#softSkills">Soft skills</li></a>
-                <li><a href="#meusProjetos">Meus projetos</li></a>
-                <li><a href="#meusArtigos">Meus Artigos</li></a>
-                <li><a href="#rodape">Rodapé</li></a>
-            </ul>
+            <nav>
+                <ul>
+                    <li><a href="#sobreMim">Sobre mim</a></li>
+                    <li><a href="#fromacaoAcademica">Formação</a></li>
+                    <li><a href="#hardSkills">Hard skills</li></a>
+                    <li><a href="#softSkills">Soft skills</li></a>
+                    <li><a href="#meusProjetos">Projetos</li></a>
+                    <li><a href="#meusArtigos">Artigos</li></a>
+                    <li><a href="#contato">Contato</li></a>
+                </ul>
+            </nav>
         </header>
         <section id="sobreMim">
             <h1>Sobre mim</h1>
             <div></div>
-            <p>Sou esdudante de desenvolvimento de sistemas no SENAI</p>
+            <p>Sou esdudante de desenvolvimento de sistemas no SENAI.</p>
             <img src="Rafaela.jpg" alt="Foto de uma mulher parda com cabelo preto e liso"
             width="200" title="Foto de uma mulher parda com cabelo preto e liso">
     
@@ -67,10 +83,13 @@
             <h2>Meus artigos</h2>
         </section>
         <footer id="rodape">
-            <p>Links úteis</p>
-
-            <p>Copyright</p>
-            <p>Feito por Rafaela</p>
+            <ul>
+                <li>Facebook </li>
+                <li>Instagram</li>
+                <li>YouTube</li>
+            </ul>
+            <address>São Paulo, SP - Brasil</address>
+            <p>Desenvolvido por Rafaela</p>
         </footer>
     </body>
 
