@@ -25,13 +25,13 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="#sobreMim">Sobre mim</li></a>
-                    <li><a href="#fromacaoAcademica">Formação</li></a>
-                    <li><a href="#hardSkills">Hard skills</li></a>
-                    <li><a href="#softSkills">Soft skills</li></a>
-                    <li><a href="#meusProjetos">Projetos</li></a>
-                    <li><a href="#meusArtigos">Artigos</li></a>
-                    <li><a href="#contato">Contato</li></a>
+                    <li><a href="#sobreMim">Sobre mim</a></li>
+                    <li><a href="#formacao">Formação</a></li>
+                    <li><a href="#hardSkills">Hard skills</a></li>
+                    <li><a href="#softSkills">Soft skills</a></li>
+                    <li><a href="#meusProjetos">Projetos</a></li>
+                    <li><a href="#meusArtigos">Artigos</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </header>
@@ -51,38 +51,107 @@
                 </li>
             </ul>
         </section>
-        <section id="fromacaoAcademica">
-            <h2>Formação</h2>
-            <ul>
-                <li>Cursando o Ensino Medio</li>
+        <section id="formacao">
+            
+            <div class=cards-em-coluna> <!--Contêiner dos cards(em coluna)-->
+            <h2 class="titulo-secao">Formação</h2>
+            <ul class="card">
+                <li class="titulo-card">Técnico em Desenvolvimento de Sistemas</li>
+                <li class="instituicao-card">SENAI "Conde José Vicente de Azevedo"</li>
+                <li class="ano-card">2026(previsto)</li>
             </ul>
         </section>
         <section id="hardSkills">
             <h2>Hard skills</h2>
-            <ul>
-                <li>Html</li>
-                <li>JavaScript</li>
-                <li>GitHub</li>
+            <div class="cards-em-linha"><!--Contêiner dos cards(em linha)-->
+                <ul class="card">
+                    <li class="icone-card">🐍</li>
+                    <li class="titulo-card">Python</li>
+                    <li class="descrição-card">Full stack, Flask, FastAPI</li>
+                </ul>
+            <ul class="card">
+                <li class="icone-card">🌐</li>
+                <li class="titulo-card">Desenvolvimento Web</li>
+                <li class="descrição-card">Front-end, HTML, CSS, JavaScript</li>
             </ul>
+            <ul class="card">
+                <li class="icone-card">📲</li>
+                <li class="titulo-card">Desenvolvimento Mobile</li>
+                <li class="descrição-card">Kotlin, Android Studio, Jetpack Compose</li>
+            </ul>
+            <ul class="card">
+                <li class="icone-card">🎲</li>
+                <li class="titulo-card">Analize de Dados</li>
+                <li class="descrição-card">MySQL, Power BI</li>
+            </ul>
+            <ul class="card">
+                <li class="icone-card">🧪</li>
+                <li class="titulo-card">Teste de Software</li>
+                <li class="descrição-card">JUnit, Cypress</li>
+            </ul>
+            </div>
         </section>
         <section id="softSkills">
             <h2>Soft skills</h2>
-            <ul>
-                <li>Amigavel</li>
-                <li>Ter empatia</li>
-                <li>Criatividade</li>
-            </ul>
+            <div class="cards-em-linha">
+                <ul class="card">
+                    <li class="icone-card">🤝</li>
+                    <li class="titulo-card">Trabalho em equipe</li>
+                </ul>
+                
+                <ul class="card">
+                    <li class="icone-card">🧠</li>
+                    <li class="titulo-card">Pensamento crítico</li>
+                </ul>
+
+                <ul class="card">
+                    <li class="icone-card">🤔</li>
+                    <li class="titulo-card">Resolução de problemas </li>
+                </ul>
+
+                <ul class="card">
+                    <li class="icone-card">🐙</li>
+                    <li class="titulo-card">Adaptabilidade</li>
+                </ul>
+
+                <ul class="card">
+                    <li class="icone-card">📚</li>
+                    <li class="titulo-card">Aprendizado contínuo</li>
+                </ul>
+
+                <ul class="card">
+                    <li class="icone-card">⏱️</li>
+                    <li class="titulo-card">Autogestão</li>
+                </ul>
+            </div>
         </section>
         <section id="meusProjetos">
             <h2>Meus projetos</h2>
-            <li>
-                <a href="https://rafadluz.github.io/lopal-moonlander/" target="_blank">Jogo de Alunissagem</a>
-            </li>
+            <div class="cards-em-linha">
+                <ul class="card">
+                        <li class="icone-card">🎮</li>
+                        <li class="titulo-card">
+                            <a href="https://rafadluz.github.io/lopal-moonlander/" target="_blank">Jogo de Alunissagem</a>
+                        </li>
+                </ul>
+            </div>
         </section>
         <section id="meusArtigos">
             <h2>Meus artigos</h2>
         </section>
-        <footer id="contato">
+
+        <section id="contato">
+            <h2>Entre em contato comigo</h2>
+            <form>
+                <input type="text" name="nome">
+                <input type="email" name="email">
+                <textarea name="mensagem" rows="5" cols="50"></textarea>
+                <!-- <input type="submit" name="botaoEnviar" value="Solicitar contato"> -->
+                <input type="submit" value="Solicitar contato"></input>
+            </form>
+        </section>
+
+        <footer id="rodape">
             <ul>
                 <li>
                     <a href="https://www.facebook.com/" target="_blank">Facebook</a>
