@@ -1,12 +1,53 @@
 /*CSS externo*/
 
+/*Tema principal*/
+:root{
+    --cor-primaria:#0077b6;
+    --cor-secundaria: #023e8a;
+    --cor-botão: #333;
+    --cor-fundo-pagina: #fff;
+    --cor-fundo-cartao: #fff;
+    --cor-primaria-texto: #333;
+    --cor-segundaria-texto: #555;
+    --cor-bordas: #aaa;
+    --cor-clique: #aec8eb;
+}
+
+[data-theme="dark"]{
+    --cor-primaria:#0077b6;
+    --cor-secundaria: #023e8a;
+    --cor-botão: #f8f4f1;
+    --cor-fundo-pagina: #211710;
+    --cor-fundo-cartao: #4e4032;
+    --cor-primaria-texto: #fff;
+    --cor-segundaria-texto: #ccc;
+    --cor-bordas: #aaa;
+    --cor-clique: #aec8eb;
+}
+
+[data-theme="alto-contraste"]{
+    --cor-primaria:#ffff;
+    --cor-secundaria: #000;
+    --cor-botão: #fff;
+    --cor-fundo-pagina: #000;
+    --cor-fundo-cartao: #000;
+    --cor-primaria-texto: #fff;
+    --cor-segundaria-texto: #fff;
+    --cor-bordas: #fff000;
+    --borda-cartao: 2px, solid, #fff000;
+    --cor-clique: #fff000;
+}
+
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--cor-fundo-pagina);
+    color: var(--cor-primaria-texto);
 }
 
 h1{
     font-size: 2rem; /*1rem = 16   1en = M*/
     font-weight: bold;
+    color: var(--cor-primaria);
 }
 
 h2{
@@ -15,7 +56,7 @@ h2{
 }
 
 header{
-    background-color: #0077b6;
+    background-color: var(--cor-primaria);
     padding: 1rem 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: sticky; /* Pode ser necessário top, left, botton ou right*/
@@ -35,25 +76,30 @@ footer ul {
 }
 
 header a{
-    color:#ffffff;
+    color: var(--cor-fundo);
     font-weight: 700;
     padding: .5rem 1rem;
 }
 
 header a:hover{
-    background-color: #023e8a;
+    background-color: var(--cor-secundaria);
+}
+
+#botao-tema,
+#botao-contraste{
+    color: var(--cor-botão);
 }
 
 section ul li a:hover{
-    background-color: #aec8eb;
+    background-color: var(--cor-clique);
 }
 
 section li a:hover{
-    background-color: #aec8eb;
+    background-color: var(--cor-clique);
 }
 
 footer ul li:hover{
-    background-color: #aec8eb;
+    background-color: var(--cor-clique);
 }
 
 
@@ -81,6 +127,35 @@ section#softSkills,
     text-align: center;
     margin-bottom: 2rem;
 }
+
+#sobreMim{
+    display: block;
+    padding: 4rem 10rem;
+}
+
+#sobreMim img{
+    float: left;
+    margin: 0 1rem 2rem 0;
+    width: 30vw;
+    border-radius: 50%;
+    border: 5px solid var(--cor-bordas);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#sobreMim p{
+    text-align: justify;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.minhas-redes{
+    clear: both;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.1rem;
+}
+
 p{
     margin-bottom: 1rem;
 }
@@ -93,9 +168,9 @@ form{
 }
 
 input[type=text],
- input[type=email],
- textarea {
-    border: 1px solid #aaa;
+input[type=email],
+textarea {
+    border: 1px solid var(--cor-bordas);
     border-radius: 10px;
     padding: .25rem .75rem;
     color: #333;
@@ -103,8 +178,8 @@ input[type=text],
 }
 
 input[type=submit]{
-    background-color: #0077b6;
-    color: #ffffff;
+    background-color: var(--cor-primaria);
+    color: var(--cor-botão);
     padding: .25rem .75rem;
     border-radius: 10px;
     border: none;
@@ -112,27 +187,6 @@ input[type=submit]{
 }
 
 /*ESTILOS DOS CARDS*/
-
-.card {
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    list-style: none;
-}
-.titulo-card{
-    font-weight: 700;
-    color: #0077b6;
-    font-size: 1.3rem;
-}
-.instituica-card{
-    font-size: 1.1rem;
-    color: #555;
-}
-
-.icone-card{
-    text-align: center;
-    font-size: 2rem;
-}
 
 .cards-em-coluna {
     display: flex;
@@ -146,3 +200,36 @@ input[type=submit]{
     gap: 1rem;
     flex-wrap: wrap;
 }
+
+.card {
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    list-style: none;
+    background-color: var(--cor-fundo-cartao);
+    border: var(--borda-cartao);
+}
+
+
+
+.titulo-card{
+    font-weight: 700;
+    color: var(--cor-primaria);
+    font-size: 1.3rem;
+}
+.instituica-card{
+    font-size: 1.1rem;
+    color: var(--cor-primaria-texto);
+}
+
+.card-imagem img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.icone-card{
+    text-align: center;
+    font-size: 2rem;
+}
+
+

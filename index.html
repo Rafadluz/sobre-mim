@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark" data-theme="alto-contraste">
     <head>
         <!-- Meta informações sobre a página -->
          <meta charset="utf-8">
@@ -21,7 +21,7 @@
          </style>
     </head>
     <!--HTML NÃO TEM PESCOÇO-->
-    <body style="background-color: white; /*CSS inline*/">
+    <body>
         <header>
             <nav>
                 <ul>
@@ -32,22 +32,24 @@
                     <li><a href="#meusProjetos">Projetos</a></li>
                     <li><a href="#meusArtigos">Artigos</a></li>
                     <li><a href="#contato">Contato</a></li>
+                    <li><span id ="botao-tema">Tema</span></li>
+                    <li><span id ="botao-contraste">Contraste</span></li>
                 </ul>
             </nav>
         </header>
         <section id="sobreMim">
             <h1>Sobre mim</h1>
             <div></div>
-            <p>Sou esdudante de desenvolvimento de sistemas no SENAI.</p>
             <img src="Rafaela.jpg" alt="Foto de uma mulher parda com cabelo preto e liso"
             width="200" title="Foto de uma mulher parda com cabelo preto e liso">
+            <p>Sou esdudante de desenvolvimento de sistemas no SENAI.</p>
     
-            <ul>
+            <ul id="minhas-redes">
                 <li>
                     <a href="https://github.com/Rafadluz" title="Clique para acessar meu portfólio no GitHub" target="_blank">Acesse o meu GitHub</a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com" target="_blank">Acesse o meu LinkedIn</a>
+                    <a href="https://www.linkedin.com" title="Clique para conhecer o meu perfil proficional no LinkedIn" target="_blank">Acesse o meu LinkedIn</a>
                 </li>
             </ul>
         </section>
@@ -137,7 +139,50 @@
             </div>
         </section>
         <section id="meusArtigos">
-            <h2>Meus artigos</h2>
+            <h2 class="titulo-secao">Meus artigos</h2>
+
+            <div class="artigos cards-em-linha">
+
+                <article class="card">
+                    <header>
+                        <h3 class="card-titulo">Portfólio profisional usando GitHub Pages</h3>
+                        <span class="data-publicacao">15 abr 2025</span>
+                        <span class="autor">Rafaela</span>
+                    </header>
+                    <p>Crie e publique seu portfólio proficional usando GitHub Pages, uma maneira fácil e gratuita de mostrar seus projetos e habilidades.</p>
+                    <footer>
+                        <button type="button" class="botao botao-continue">Continue lendo</button>
+                        <button type="button" class="botao botao-compartilhar"></button>
+                    </footer>
+                </article>
+
+                <article class="card">
+                    <header>
+                        <h3 class="card-titulo">Portfólio profisional usando GitHub Pages</h3>
+                        <span class="data-publicacao">15 abr 2025</span>
+                        <span class="autor">Rafaela</span>
+                    </header>
+                    <p>Crie e publique seu portfólio proficional usando GitHub Pages, uma maneira fácil e gratuita de mostrar seus projetos e habilidades.</p>
+                    <footer>
+                        <button type="button" class="botao botao-continue">Continue lendo</button>
+                        <button type="button" class="botao botao-compartilhar"></button>
+                    </footer>
+                </article>
+
+                <article class="card">
+                    <header>
+                        <h3 class="card-titulo">Portfólio profisional usando GitHub Pages</h3>
+                        <span class="data-publicacao">15 abr 2025</span>
+                        <span class="autor">Rafaela</span>
+                    </header>
+                    <p>Crie e publique seu portfólio proficional usando GitHub Pages, uma maneira fácil e gratuita de mostrar seus projetos e habilidades.</p>
+                    <footer>
+                        <button type="button" class="botao botao-continue">Continue lendo</button>
+                        <button type="button" class="botao botao-compartilhar"></button>
+                    </footer>
+                </article>
+
+            </div>
         </section>
 
         <section id="contato">
@@ -166,6 +211,28 @@
             <address>São Paulo, SP - Brasil</address>
             <p>Desenvolvido por <a href="#sobreMim">Rafaela</a></p>
         </footer>
+        <script>
+            document.querySelector("#botao-tema").addEventListener("click", trocaTema)
+            function trocaTema(){
+                const root = document.documentElement;
+
+                if(root.getAttribute("data-theme")=== "dark"){
+                    root.removeAttribute("data-theme");
+                }else{
+                    root.setAttribute("data-theme", "dark");
+                }
+            }
+
+            document.querySelector("#botao-contraste").addEventListener("click", trocaTemaContraste)
+            function trocaTemaContraste() {
+                const root = document.documentElement;
+                if (root.getAttribute("data-contraste") === "alto-contraste") {
+                    root.setAttribute("data-contraste", "normal");  // Mudei de remove para set para definir 'normal'
+                } else {
+                    root.setAttribute("data-contraste", "alto-contraste");
+                }
+            }
+        </script>
     </body>
 
 </html>
