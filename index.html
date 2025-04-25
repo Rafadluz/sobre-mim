@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="dark" data-theme="alto-contraste">
+<html lang="pt-br">
     <head>
         <!-- Meta informações sobre a página -->
          <meta charset="utf-8">
@@ -33,7 +33,7 @@
                     <li><a href="#meusArtigos">Artigos</a></li>
                     <li><a href="#contato">Contato</a></li>
                     <li><span id ="botao-tema">Tema</span></li>
-                    <li><span id ="botao-contraste">Contraste</span></li>
+                    <li><span id="botao-contraste">Contraste<i class="fi fi-sr-circle-half-stroke"></i></span></li>
                 </ul>
             </nav>
         </header>
@@ -142,45 +142,22 @@
             <h2 class="titulo-secao">Meus artigos</h2>
 
             <div class="artigos cards-em-linha">
-
-                <article class="card">
-                    <header>
-                        <h3 class="card-titulo">Portfólio profisional usando GitHub Pages</h3>
-                        <span class="data-publicacao">15 abr 2025</span>
-                        <span class="autor">Rafaela</span>
-                    </header>
-                    <p>Crie e publique seu portfólio proficional usando GitHub Pages, uma maneira fácil e gratuita de mostrar seus projetos e habilidades.</p>
-                    <footer>
-                        <button type="button" class="botao botao-continue">Continue lendo</button>
-                        <button type="button" class="botao botao-compartilhar"></button>
-                    </footer>
-                </article>
-
-                <article class="card">
-                    <header>
-                        <h3 class="card-titulo">Portfólio profisional usando GitHub Pages</h3>
-                        <span class="data-publicacao">15 abr 2025</span>
-                        <span class="autor">Rafaela</span>
-                    </header>
-                    <p>Crie e publique seu portfólio proficional usando GitHub Pages, uma maneira fácil e gratuita de mostrar seus projetos e habilidades.</p>
-                    <footer>
-                        <button type="button" class="botao botao-continue">Continue lendo</button>
-                        <button type="button" class="botao botao-compartilhar"></button>
-                    </footer>
-                </article>
-
-                <article class="card">
-                    <header>
-                        <h3 class="card-titulo">Portfólio profisional usando GitHub Pages</h3>
-                        <span class="data-publicacao">15 abr 2025</span>
-                        <span class="autor">Rafaela</span>
-                    </header>
-                    <p>Crie e publique seu portfólio proficional usando GitHub Pages, uma maneira fácil e gratuita de mostrar seus projetos e habilidades.</p>
-                    <footer>
-                        <button type="button" class="botao botao-continue">Continue lendo</button>
-                        <button type="button" class="botao botao-compartilhar"></button>
-                    </footer>
-                </article>
+                    <article class="card">
+               
+                        <header>
+                            <h3 class="card-titulo">Portfólio profisisonal usando GitHub Pages</h3>
+                            <span class="data-publicacao">15 abr 2025</span>
+                            <span class="autor">Rafaela</span>
+                        </header>
+        
+                        <p>Crie e publique seu portfólio profissional usando GitHub Pages, uma maneira fácil e gratuita de mostrar seus projetos e habilidades.</p>
+        
+                        <footer>
+                            <button type="button" class="botao botao-primario">Continue lendo</button>
+                            <button type="button" class="botao botao-secundario" title="Compartilhar"><i class="fi fi-sr-share"></i></button>
+                        </footer>
+        
+                    </article>
 
             </div>
         </section>
@@ -223,15 +200,20 @@
                 }
             }
 
-            document.querySelector("#botao-contraste").addEventListener("click", trocaTemaContraste)
-            function trocaTemaContraste() {
-                const root = document.documentElement;
-                if (root.getAttribute("data-contraste") === "alto-contraste") {
-                    root.setAttribute("data-contraste", "normal");  // Mudei de remove para set para definir 'normal'
-                } else {
-                    root.setAttribute("data-contraste", "alto-contraste");
-                }
+            document.querySelector('#botao-contraste').addEventListener('click', trocarTemaContraste);
+
+        function trocarTemaContraste() {
+            // Função que faz o toggle do alto contraste da página
+
+            const root = document.documentElement;
+
+            if (root.getAttribute('data-theme') === 'alto-contraste') {
+                root.removeAttribute('data-theme');
+            } else {
+                root.setAttribute('data-theme', 'alto-contraste');
             }
+        }
+
         </script>
     </body>
 
